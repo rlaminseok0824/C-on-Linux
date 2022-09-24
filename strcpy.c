@@ -11,8 +11,8 @@ int main(){
 	//char str[20] = "hello world\n";
 	//char str_c[20] = "good job!\n";
 	
-	char str[20] = "ada";
-	char str_a[20] = "aba";
+	char str[20] = "aba";
+	char str_a[20] = "abac";
 
 	printf("%d\n",strcmp(str,str_a));
 
@@ -58,7 +58,7 @@ int strcmp(const char *s1,const char *s2){
 		if(temp != 0 || s2[i] == 0)
 			return temp;
 	}
-	if(s2 + s1len != NULL)
+	if(s2 + s1len != NULL )
 		return *(s2 + s1len);
 	return 0;
 }
