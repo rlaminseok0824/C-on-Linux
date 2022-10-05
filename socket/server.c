@@ -46,14 +46,13 @@ int main(int argc,char ** argv){
 		clnt_sock = accept(serv_sock,(struct sockaddr *)&clnt_addr,&clnt_addr_size); //소켓 받을 때 ip 주소 담아서 옴(2번째 인자)
 		g_client_socket[g_client_count++] = clnt_sock;
 
-		recv_len = read(clnt_sock,buff,200); //클라에서 받아온 sock, buff에 저장
 		while(1){
+			recv_len = read(clnt_sock,buff,200); //클라에서 받아온 sock, buff에 저장
 			printf("recv : ");
 			for(int i = 0; i < recv_len;i++){
-			printf("%02x",(unsigned char)buff[i]);
+				printf("%02x",(unsigned char)buff[i]);
 			}
 			printf("\n");
-
 		}
 	}
 	return 1;
